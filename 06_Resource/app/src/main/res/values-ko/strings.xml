@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">06_자원</string>
+    <string name="hello_world">세상아, 안녕!</string>
+    <string name="action_setting">설정</string>
+</resources>

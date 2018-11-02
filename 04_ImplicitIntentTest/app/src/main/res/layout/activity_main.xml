@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/call"
+        android:text="전화걸기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButton"/>
+
+    <Button
+        android:id="@+id/phone"
+        android:text="연락처보기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButton"/>
+
+    <Button
+        android:id="@+id/map"
+        android:text="지도보기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButton"/>
+
+    <Button
+        android:id="@+id/web"
+        android:text="웹브라우저"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButton"/>
+
+    <Button
+        android:id="@+id/button"
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButton"/>
+
+
+
+</LinearLayout>
