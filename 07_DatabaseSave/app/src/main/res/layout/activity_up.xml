@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpAct"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"></ListView>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:hint="학번"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="10"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:hint="이름"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="20"/>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:hint="나이"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:hint="업데이트"
+        android:onClick="onClickButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
