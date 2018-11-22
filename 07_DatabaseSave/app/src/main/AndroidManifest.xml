@@ -20,7 +20,13 @@
         <activity android:name=".InsAct" />
         <activity android:name=".DelAct" />
         <activity android:name=".UpAct" />
-        <activity android:name=".CosAct"></activity>
+        <activity android:name=".CosAct" />
+
+        <provider
+            android:name=".TestDBProvider"
+            android:authorities="a07_databasesave.test"
+            android:enabled="true"
+            android:exported="true"></provider>
     </application>
 
 </manifest>

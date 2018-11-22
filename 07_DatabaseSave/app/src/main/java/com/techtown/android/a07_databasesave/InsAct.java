@@ -26,7 +26,7 @@ public class InsAct extends AppCompatActivity {
 
         if(Integer.parseInt(age)<=150){
 
-            String sql = "INSERT INTO student0 (sno,name, age) Values ("+sno+",'"+name + "',"+age+");";
+            String sql = "INSERT INTO people (sno,name, age) Values ("+sno+",'"+name + "',"+age+");";
 
             SQLiteDatabase db = openOrCreateDatabase(
                     "student.db",

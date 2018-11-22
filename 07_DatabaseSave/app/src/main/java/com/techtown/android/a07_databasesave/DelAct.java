@@ -31,10 +31,10 @@ public class DelAct extends ListActivity {
                 SQLiteDatabase.CREATE_IF_NECESSARY,
                 null);
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS student0"
+        db.execSQL("CREATE TABLE IF NOT EXISTS people"
                 + "(_id INTEGER PRIMARY KEY AUTOINCREMENT, sno INTEGER , name TEXT, age INTEGER);" );
 
-        Cursor c = db.rawQuery("SELECT * FROM student0;",null);
+        Cursor c = db.rawQuery("SELECT * FROM people;",null);
         startManagingCursor(c);
 
         ListAdapter adapt = new SimpleCursorAdapter(
@@ -56,7 +56,7 @@ public class DelAct extends ListActivity {
         txt = (EditText)findViewById(R.id.edit1);
         String sno = txt.getText().toString();
 
-        String sql = "DELETE FROM student0 WHERE sno = " + sno +";";
+        String sql = "DELETE FROM people WHERE sno = " + sno +";";
 
         SQLiteDatabase db = openOrCreateDatabase(
                 "student.db",

@@ -25,10 +25,10 @@ public class UpAct extends ListActivity {
                 SQLiteDatabase.CREATE_IF_NECESSARY,
                 null);
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS student0"
+        db.execSQL("CREATE TABLE IF NOT EXISTS people"
                 + "(_id INTEGER PRIMARY KEY AUTOINCREMENT, sno INTEGER , name TEXT, age INTEGER);" );
 
-        Cursor c = db.rawQuery("SELECT * FROM student0;",null);
+        Cursor c = db.rawQuery("SELECT * FROM people;",null);
         startManagingCursor(c);
 
         ListAdapter adapt = new SimpleCursorAdapter(
@@ -60,7 +60,7 @@ public class UpAct extends ListActivity {
 
         if(Integer.parseInt(age)<=150){
 
-            String sql = "UPDATE student0 SET name = '"+name+ "',age = '"+age +"' WHERE sno = "+sno+";";
+            String sql = "UPDATE people SET name = '"+name+ "',age = '"+age +"' WHERE sno = "+sno+";";
 
             SQLiteDatabase db = openOrCreateDatabase(
                     "student.db",
