@@ -6,6 +6,16 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <TextView
+        android:text="@string/how"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id = "@+id/button2"
         android:layout_width = "match_parent"

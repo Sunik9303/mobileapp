@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">09_AsyncTaskTest</string>
+    <string name="app_name">Practice_9.1</string>
+    <string name="how">누적계산기\n
+    1부터 입력한 숫자까지 누적시켜 더하는 계산을 수행합니다.\n
+    2013097088_황선익</string>
 </resources>

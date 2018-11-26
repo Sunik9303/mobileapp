@@ -1,11 +1,11 @@
 package com.techtown.android.a09_asynctasktest;
-
 import android.os.AsyncTask;
 import android.widget.TextView;
 
 public class CounterTask extends AsyncTask<Integer, Integer, Integer> {
     TextView mOutput;
     int mCount = 0;
+    int total = 0;
 
     public void setOutputView(TextView txt) {
         mOutput = txt;
@@ -19,20 +19,22 @@ public class CounterTask extends AsyncTask<Integer, Integer, Integer> {
 
     @Override
     protected Integer doInBackground(Integer... integers) { // 내부 스레드에서 진행 됨
-        for(int i = 0; i < integers[1]; i++) {
+        for(int i = 0; i < integers[0]; i++) {
             mCount++;
-            publishProgress(mCount); // trigger the execution of onProgressUpdate( )
+            total = total + mCount;
+            publishProgress(mCount,total); // trigger the execution of onProgressUpdate( )
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {;}
         }
-        return mCount;
+        return total;
     }
 
     @Override
     protected void onProgressUpdate(Integer... values) {
         super.onProgressUpdate(values);
-        mOutput.setText("진행상황: " + values[0]);
+        mOutput.setText("진행상황: " + values[0]
+        +"\n현재까지합: "+values[1]);
     }
 
     @Override
@@ -46,9 +48,4 @@ public class CounterTask extends AsyncTask<Integer, Integer, Integer> {
         super.onCancelled(integer);
         mOutput.setText("취소됨");
     }
-
-
-
-
-
 }
