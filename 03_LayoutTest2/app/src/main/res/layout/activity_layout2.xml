@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text=""
+        android:id="@+id/textView1"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:background="#336"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:text="입력"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00f"
+        android:layout_toRightOf="@id/textView1"
+        android:layout_alignTop="@id/textView1"
+        android:layout_alignBottom="@id/textView1"/>
+
+    <Button
+        android:text ="버튼"
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView2"
+        android:layout_alignTop="@id/textView2"
+        android:layout_alignBottom="@id/textView2"/>
+
+    <Button
+        android:text="출력"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#090"
+        android:layout_below="@id/textView2"
+        android:layout_alignLeft="@id/textView2"/>
+
+
+</RelativeLayout>
