@@ -67,6 +67,19 @@ public class MainActivity extends AppCompatActivity {
         mMediaPlayer.start();
     }
 
+    public void start(){
+        try {
+            mMediaPlayer.setDataSource(mSdPath + "/" + mVideoFile);
+            mMediaPlayer.setDisplay(mSurfaceHolder);
+            mMediaPlayer.prepare();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+        mMediaPlayer.setLooping(true);
+        mMediaPlayer.start();
+    }
+
     public void stopVideo(View view) {
         mMediaPlayer.stop();
         mMediaPlayer.reset();
@@ -82,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 ActivityCompat.requestPermissions( MainActivity.this, new String[]{permission}, requestCode);
             }
         } else {
-            Toast.makeText(this, "" + permission + " is already granted", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "" + permission + " is already granted", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -124,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
             Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show();
+            start();
         } else {
             Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show();
         }

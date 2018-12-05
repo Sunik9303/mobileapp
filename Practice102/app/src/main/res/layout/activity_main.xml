@@ -6,6 +6,10 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+    <TextView
+        android:text="2013097088_황선익"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/buttonl"
